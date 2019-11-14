@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/linear_layout"
+    android:background="@drawable/gradient_list"
+    tools:context=".MainActivity">
+
+
+        <TextView
+            android:id="@+id/welcome"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="50dp"
+            android:paddingTop="50dp"
+            android:textSize="33sp"
+            android:text="@string/welcome_to_minesweeper" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <us.ait.minesweeper.view.MinesweeperView
+            android:id="@+id/mineView"
+            android:layout_width="400dp"
+            android:layout_height="400dp" />
+
+    </LinearLayout>
+
+
+    <ToggleButton
+        android:id="@+id/toggle"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textOff="Try field"
+        android:textOn="Place a flag"/>
+
+
+
+
+</LinearLayout>

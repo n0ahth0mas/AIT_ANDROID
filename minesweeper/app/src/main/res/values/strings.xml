@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Minesweeper</string>
+    <string name="welcome_to_minesweeper">Welcome to Minesweeper!</string>
+    <string name="try_a_field">Try a field</string>
+    <string name="place_a_flag">Place a flag</string>
+    <string name="bomb_total">There are ${MinesweeperModel.bombs.toString()} bombs</string>
+    <string name="title_activity_win">WinActivity</string>
+    <string name="title_activity_lose">LoseActivity</string>
+    <string name="flagsRemain">Flags remaining</string>
+    <string name="play_again">Play Again</string>
+    <string name="you_won">You Won!</string>
+    <string name="you_lost">You Lost!</string>
+</resources>
