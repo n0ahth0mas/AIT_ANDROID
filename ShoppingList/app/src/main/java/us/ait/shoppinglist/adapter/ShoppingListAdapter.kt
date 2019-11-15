@@ -4,10 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ScrollView
-import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.new_item_list.view.*
 import kotlinx.android.synthetic.main.shopping_item_row.view.*
 import us.ait.shoppinglist.R
 import us.ait.shoppinglist.ShoppingActivity
@@ -20,6 +17,8 @@ class ShoppingListAdapter : RecyclerView.Adapter<ShoppingListAdapter.ViewHolder>
 
     var shoppingList = mutableListOf<ShoppingItem>()
     var context : Context
+    var spinArray = R.array.item_array
+
 
     constructor(context: Context, listShoppingItems: List<ShoppingItem>){
         this.context = context
@@ -31,6 +30,7 @@ class ShoppingListAdapter : RecyclerView.Adapter<ShoppingListAdapter.ViewHolder>
         val shoppingItemRow = LayoutInflater.from(context).inflate(
             R.layout.shopping_item_row, parent, false
         )
+
         return ViewHolder(shoppingItemRow)
     }
 
@@ -43,11 +43,13 @@ class ShoppingListAdapter : RecyclerView.Adapter<ShoppingListAdapter.ViewHolder>
 
         holder.cbItem.isChecked = shoppingItem.status
         holder.tvName.text = shoppingItem.name
-        holder.tvCategory.text = shoppingItem.category.toString()
         holder.tvDesctiption.text = shoppingItem.description
         holder.tvPrice.text = shoppingItem.price.toString()
 
+
         //just if it ==1 make it this, 2==that, etc
+        //holder.spCategory.setImageResource(R.drawable._____)
+
 
         holder.btnDelete.setOnClickListener{
            deleteShoppingItem(holder.adapterPosition)
@@ -112,7 +114,7 @@ class ShoppingListAdapter : RecyclerView.Adapter<ShoppingListAdapter.ViewHolder>
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val cbItem = itemView.cbItem
         val tvName = itemView.tvName
-        val tvCategory = itemView.tvCategory
+        val spCategory = itemView.itemImg
         val tvDesctiption = itemView.tvDescription
         val tvPrice = itemView.tvPrice
 

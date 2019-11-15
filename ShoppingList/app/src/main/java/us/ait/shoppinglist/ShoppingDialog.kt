@@ -31,7 +31,7 @@ class ShoppingDialog : DialogFragment() {
         }
     }
 
-    private lateinit var etCategory: Spinner
+    private lateinit var spCategory: Spinner
     private lateinit var etName: EditText
     private lateinit var etDescription: EditText
     private lateinit var etPrice: EditText
@@ -46,7 +46,7 @@ class ShoppingDialog : DialogFragment() {
         val rootView = requireActivity().layoutInflater.inflate(
             R.layout.new_item_list, null
         )
-        etCategory = rootView.etCategory
+        spCategory = rootView.spCategory
         etName = rootView.etName
         etDescription = rootView.etDescription
         etPrice = rootView.etPrice
@@ -58,13 +58,13 @@ class ShoppingDialog : DialogFragment() {
         if (isEditMode) {
             var shoppingItem: ShoppingItem =
                 (arguments?.getSerializable("KEY_ITEM") as ShoppingItem)
-            etCategory.setSelection(shoppingItem.category)//whatever the spinner is at)
+            spCategory.setSelection(shoppingItem.category)//whatever the spinner is at
             etName.setText(shoppingItem.name)
             etDescription.setText(shoppingItem.description)
             etPrice.setText((shoppingItem.price).toInt())
         }
 
-        builder.setPositiveButton("OK") { dialog, witch ->
+        builder.setPositiveButton("OK") { dialog, which ->
             // empty
         }
 
@@ -95,7 +95,7 @@ class ShoppingDialog : DialogFragment() {
         shoppingItemHandler.shoppingItemCreated(
             ShoppingItem(
                 null,
-                etCategory.selectedItemPosition,
+                spCategory.selectedItemPosition,
                 etName.text.toString(),
                 etDescription.text.toString(),
                 etPrice.text.toString().toInt(),
@@ -109,7 +109,7 @@ class ShoppingDialog : DialogFragment() {
             "KEY_ITEM"
         ) as ShoppingItem
         shoppingItemToEdit.name = etName.text.toString()
-        shoppingItemToEdit.category = etCategory.selectedItemPosition
+        shoppingItemToEdit.category = spCategory.selectedItemPosition
         shoppingItemToEdit.description = etDescription.text.toString()
         shoppingItemToEdit.price = etPrice.text.toString().toInt()
 

@@ -5,9 +5,10 @@
     android:layout_height="match_parent">
 
     <Spinner
-        android:id="@+id/etCategory"
+        android:id="@+id/spCategory"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:entries="@array/item_array"/>
 
     <EditText
         android:id="@+id/etName"
