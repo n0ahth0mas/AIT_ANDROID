@@ -61,7 +61,7 @@ class ShoppingDialog : DialogFragment() {
             spCategory.setSelection(shoppingItem.category)//whatever the spinner is at
             etName.setText(shoppingItem.name)
             etDescription.setText(shoppingItem.description)
-            etPrice.setText((shoppingItem.price).toInt())
+            etPrice.setText((shoppingItem.price.toString()))
         }
 
         builder.setPositiveButton("OK") { dialog, which ->
@@ -86,6 +86,7 @@ class ShoppingDialog : DialogFragment() {
                 dialog!!.dismiss()
             } else {
                 etName.error = "This field cannot be empty"
+                etPrice.error = "This field cannot be empty"
             }
         }
     }

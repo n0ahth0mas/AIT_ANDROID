@@ -17,7 +17,6 @@ class ShoppingListAdapter : RecyclerView.Adapter<ShoppingListAdapter.ViewHolder>
 
     var shoppingList = mutableListOf<ShoppingItem>()
     var context : Context
-    var spinArray = R.array.item_array
 
 
     constructor(context: Context, listShoppingItems: List<ShoppingItem>){
@@ -42,13 +41,17 @@ class ShoppingListAdapter : RecyclerView.Adapter<ShoppingListAdapter.ViewHolder>
         var shoppingItem = shoppingList.get(holder.adapterPosition)
 
         holder.cbItem.isChecked = shoppingItem.status
-        holder.tvName.text = shoppingItem.name
+        holder.cbItem.text = shoppingItem.name
         holder.tvDesctiption.text = shoppingItem.description
         holder.tvPrice.text = shoppingItem.price.toString()
 
-
-        //just if it ==1 make it this, 2==that, etc
-        //holder.spCategory.setImageResource(R.drawable._____)
+        if(shoppingItem.category ==0 ){
+            holder.spCategory.setImageResource(R.drawable.grocery)
+        } else if (shoppingItem.category == 2 ){
+            holder.spCategory.setImageResource(R.drawable.laundry)
+        } else{
+            holder.spCategory.setImageResource(R.drawable.toiletries)
+        }
 
 
         holder.btnDelete.setOnClickListener{
@@ -113,7 +116,6 @@ class ShoppingListAdapter : RecyclerView.Adapter<ShoppingListAdapter.ViewHolder>
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val cbItem = itemView.cbItem
-        val tvName = itemView.tvName
         val spCategory = itemView.itemImg
         val tvDesctiption = itemView.tvDescription
         val tvPrice = itemView.tvPrice

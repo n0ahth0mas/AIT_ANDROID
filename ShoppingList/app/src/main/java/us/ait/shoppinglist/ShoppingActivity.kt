@@ -37,6 +37,10 @@ class ShoppingActivity : AppCompatActivity(), ShoppingDialog.ShoppingItemHandler
         fab.setOnClickListener {
             showAddItemDialog()
         }
+
+        fabDeleteAll.setOnClickListener {
+            shoppingListAdapter.deleteAllShoppingItems()
+        }
     }
 
     /**
