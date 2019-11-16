@@ -3,22 +3,12 @@ package us.ait.shoppinglist
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
-
-    var threadEnabled = false
-
-    inner class threadWait : Thread(){
-        override fun run() {
-            while (threadEnabled){
-                sleep(3000)
-                runSecondActivity()
-                threadEnabled=false
-            }
-        }
-    }
 
     fun runSecondActivity(){
         var intent = Intent()
@@ -30,7 +20,26 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        threadEnabled = true
-        threadWait().start()
+        var iconAnim: Animation = AnimationUtils.loadAnimation(
+            this@MainActivity, R.anim.shop_icon)
+
+        var logoAnim: Animation = AnimationUtils.loadAnimation(
+            this@MainActivity, R.anim.text_anim)
+
+        iconAnim.setAnimationListener(
+            object: Animation.AnimationListener{
+                override fun onAnimationRepeat(animation: Animation?) {
+                }
+                override fun onAnimationEnd(animation: Animation?) {
+                    runSecondActivity()
+                }
+
+                override fun onAnimationStart(animation: Animation?) {
+                }
+            }
+        )
+        circle.startAnimation(logoAnim)
+        bigtext.startAnimation(iconAnim)
+
     }
 }

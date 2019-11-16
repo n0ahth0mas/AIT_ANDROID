@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/circle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -32,13 +32,13 @@
         app:layout_constraintGuide_begin="167dp" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/bigtext"
         android:layout_width="100dp"
-        android:layout_height="91dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        android:layout_height="87dp"
+        app:layout_constraintBottom_toTopOf="@+id/circle"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/circle"
         app:srcCompat="@drawable/logotransparent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
