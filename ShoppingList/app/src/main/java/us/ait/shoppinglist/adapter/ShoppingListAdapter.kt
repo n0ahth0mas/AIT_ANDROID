@@ -48,7 +48,6 @@ class ShoppingListAdapter : RecyclerView.Adapter<ShoppingListAdapter.ViewHolder>
 
         holder.cbItem.isChecked = shoppingItem.status
         holder.cbItem.text = shoppingItem.name
-        holder.tvDesctiption.text = shoppingItem.description
         holder.tvPrice.text = shoppingItem.price.toString()
 
         if(shoppingItem.category ==0 ){
@@ -128,7 +127,6 @@ class ShoppingListAdapter : RecyclerView.Adapter<ShoppingListAdapter.ViewHolder>
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val cbItem = itemView.cbItem
         val spCategory = itemView.itemImg
-        val tvDesctiption = itemView.tvDescription
         val tvPrice = itemView.tvPrice
 
         val btnDelete = itemView.btnDelete

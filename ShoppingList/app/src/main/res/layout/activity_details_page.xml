@@ -4,28 +4,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Spinner
-        android:id="@+id/spCategory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:entries="@array/item_array"/>
-
     <TextView
         android:id="@+id/tvName"
         android:layout_width="match_parent"
-        android:text="Name"
+        android:textSize="30sp"
         android:layout_height="match_parent"/>
 
     <TextView
         android:id="@+id/tvDescription"
         android:layout_width="match_parent"
-        android:text="Description"
+        android:textSize="30sp"
         android:layout_height="match_parent"/>
 
     <TextView
         android:id="@+id/tvPrice"
-        android:text="Price"
         android:layout_width="match_parent"
+        android:textSize="30sp"
         android:layout_height="match_parent"/>
 
 </LinearLayout>

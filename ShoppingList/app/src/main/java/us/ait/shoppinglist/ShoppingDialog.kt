@@ -13,6 +13,11 @@ import java.lang.RuntimeException
 
 class ShoppingDialog : DialogFragment() {
 
+    companion object{
+        const val KEY_ITEM = "KEY_ITEM"
+    }
+
+
     interface ShoppingItemHandler {
         fun shoppingItemCreated(item: ShoppingItem)
         fun shoppingItemUpdated(item: ShoppingItem)
@@ -30,6 +35,8 @@ class ShoppingDialog : DialogFragment() {
                 "The activity does not implement the ShoppingItemHandlerInterface")
         }
     }
+
+
 
     private lateinit var spCategory: Spinner
     private lateinit var etName: EditText
@@ -53,11 +60,11 @@ class ShoppingDialog : DialogFragment() {
 
         builder.setView(rootView)
 
-        isEditMode = ((arguments != null) && arguments!!.containsKey("KEY_ITEM"))
+        isEditMode = ((arguments != null) && arguments!!.containsKey(KEY_ITEM))
 
         if (isEditMode) {
             var shoppingItem: ShoppingItem =
-                (arguments?.getSerializable("KEY_ITEM") as ShoppingItem)
+                (arguments?.getSerializable(KEY_ITEM) as ShoppingItem)
             spCategory.setSelection(shoppingItem.category)//whatever the spinner is at
             etName.setText(shoppingItem.name)
             etDescription.setText(shoppingItem.description)
@@ -107,7 +114,7 @@ class ShoppingDialog : DialogFragment() {
 
     private fun handleShoppingItemEdit() {
         val shoppingItemToEdit = arguments?.getSerializable(
-            "KEY_ITEM"
+            KEY_ITEM
         ) as ShoppingItem
         shoppingItemToEdit.name = etName.text.toString()
         shoppingItemToEdit.category = spCategory.selectedItemPosition

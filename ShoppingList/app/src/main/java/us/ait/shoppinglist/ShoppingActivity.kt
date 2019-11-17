@@ -105,7 +105,7 @@ class ShoppingActivity : AppCompatActivity(), ShoppingDialog.ShoppingItemHandler
 
         val bundle = Bundle()
 
-        bundle.putSerializable(KEY_ITEM_DETAILS, shoppingItem)
+        bundle.putSerializable(KEY_ITEM, shoppingItem)
 
         detailsDialog.arguments = bundle
 
