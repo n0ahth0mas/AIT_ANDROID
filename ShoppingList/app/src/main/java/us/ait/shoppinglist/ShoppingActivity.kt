@@ -2,6 +2,7 @@ package us.ait.shoppinglist
 
 import android.os.Bundle
 import android.preference.PreferenceManager
+import android.view.View
 import android.widget.ArrayAdapter
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -22,11 +23,15 @@ class ShoppingActivity : AppCompatActivity(), ShoppingDialog.ShoppingItemHandler
         const val KEY_STARTED = "KEY_STARTED"
         const val TAG_ITEM_DIALOG = "TAG_ITEM_DIALOG"
         const val TAG_TODO_EDIT = "TAG_TODO_EDIT"
+        const val KEY_ITEM_DETAILS = "KEY_ITEM_DETAILS"
+        const val TAG_ITEM_DETAILS= "TAG_ITEM_DETAILS"
+
     }
 
     lateinit var shoppingListAdapter: ShoppingListAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shopping)
 
@@ -50,12 +55,12 @@ class ShoppingActivity : AppCompatActivity(), ShoppingDialog.ShoppingItemHandler
         editor.putBoolean((KEY_STARTED, true)
         editor.apply()
     }
-    **/
 
     fun wasStartedBefore(): Boolean{
         var sharedPref = PreferenceManager.getDefaultSharedPreferences(this)
         return sharedPref.getBoolean(KEY_STARTED, false)
     }
+    **/
 
     private fun initRecyclerView(){
         Thread {
@@ -94,6 +99,19 @@ class ShoppingActivity : AppCompatActivity(), ShoppingDialog.ShoppingItemHandler
 
         editDialog.show(supportFragmentManager, TAG_ITEM_DIALOG)
     }
+
+    fun showDetails(shoppingItem: ShoppingItem){
+        var detailsDialog = DetailsPage()
+
+        val bundle = Bundle()
+
+        bundle.putSerializable(KEY_ITEM_DETAILS, shoppingItem)
+
+        detailsDialog.arguments = bundle
+
+        detailsDialog.show(supportFragmentManager, TAG_ITEM_DETAILS)
+    }
+
 
     fun saveShoppingItem(shoppingItem: ShoppingItem){
         Thread{

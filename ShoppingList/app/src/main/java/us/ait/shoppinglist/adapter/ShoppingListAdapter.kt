@@ -1,13 +1,19 @@
 package us.ait.shoppinglist.adapter
 
+import android.app.Dialog
 import android.content.Context
+import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.shopping_item_row.view.*
+import us.ait.shoppinglist.DetailsPage
 import us.ait.shoppinglist.R
 import us.ait.shoppinglist.ShoppingActivity
+import us.ait.shoppinglist.ShoppingDialog
 import us.ait.shoppinglist.data.AppDatabase
 import us.ait.shoppinglist.data.ShoppingItem
 import us.ait.shoppinglist.touch.ShoppingListTouchHelperCallback
@@ -58,6 +64,10 @@ class ShoppingListAdapter : RecyclerView.Adapter<ShoppingListAdapter.ViewHolder>
            deleteShoppingItem(holder.adapterPosition)
         }
 
+        holder.btnDetails.setOnClickListener{
+            (context as ShoppingActivity).showDetails(shoppingItem)
+        }
+
         holder.cbItem.setOnClickListener(){
             shoppingItem.status = holder.cbItem.isChecked
             updateShoppingItem(shoppingItem)
@@ -78,6 +88,7 @@ class ShoppingListAdapter : RecyclerView.Adapter<ShoppingListAdapter.ViewHolder>
         shoppingList.set(index,shoppingItem)
         notifyItemChanged(index)
     }
+
 
     fun deleteShoppingItem(index: Int){
         Thread{
@@ -122,5 +133,6 @@ class ShoppingListAdapter : RecyclerView.Adapter<ShoppingListAdapter.ViewHolder>
 
         val btnDelete = itemView.btnDelete
         val btnEdit = itemView.btnEdit
+        val btnDetails = itemView.btnDetails
     }
 }
