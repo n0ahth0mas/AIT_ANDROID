@@ -84,7 +84,7 @@ class ShoppingListAdapter : RecyclerView.Adapter<ShoppingListAdapter.ViewHolder>
     }
 
 
-    private fun deleteShoppingItem(index: Int){
+    private -fun deleteShoppingItem(index: Int){
         Thread{
             AppDatabase.getInstance(context).shoppingItemDao().deleteItem(shoppingList[index])
             (context as ShoppingActivity).runOnUiThread {
