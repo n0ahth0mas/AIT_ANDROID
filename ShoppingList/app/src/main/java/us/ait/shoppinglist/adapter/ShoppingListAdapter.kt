@@ -1,19 +1,14 @@
 package us.ait.shoppinglist.adapter
 
-import android.app.Dialog
+
 import android.content.Context
-import android.content.Intent
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.shopping_item_row.view.*
-import us.ait.shoppinglist.DetailsPage
 import us.ait.shoppinglist.R
 import us.ait.shoppinglist.ShoppingActivity
-import us.ait.shoppinglist.ShoppingDialog
 import us.ait.shoppinglist.data.AppDatabase
 import us.ait.shoppinglist.data.ShoppingItem
 import us.ait.shoppinglist.touch.ShoppingListTouchHelperCallback
@@ -44,7 +39,7 @@ class ShoppingListAdapter : RecyclerView.Adapter<ShoppingListAdapter.ViewHolder>
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        var shoppingItem = shoppingList.get(holder.adapterPosition)
+        val shoppingItem = shoppingList.get(holder.adapterPosition)
 
         holder.cbItem.isChecked = shoppingItem.status
         holder.cbItem.text = shoppingItem.name
@@ -77,7 +72,7 @@ class ShoppingListAdapter : RecyclerView.Adapter<ShoppingListAdapter.ViewHolder>
         }
     }
 
-    fun updateShoppingItem(shoppingItem: ShoppingItem){
+    private fun updateShoppingItem(shoppingItem: ShoppingItem){
         Thread{
             AppDatabase.getInstance(context).shoppingItemDao().updateItem(shoppingItem)
         }.start()
@@ -89,7 +84,7 @@ class ShoppingListAdapter : RecyclerView.Adapter<ShoppingListAdapter.ViewHolder>
     }
 
 
-    fun deleteShoppingItem(index: Int){
+    private fun deleteShoppingItem(index: Int){
         Thread{
             AppDatabase.getInstance(context).shoppingItemDao().deleteItem(shoppingList[index])
             (context as ShoppingActivity).runOnUiThread {

@@ -27,7 +27,7 @@ class DetailsPage : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val builder = AlertDialog.Builder(requireContext())
 
-        builder.setTitle("View Item Details")
+        builder.setTitle(getString(R.string.mainTitle))
 
         val rootView = requireActivity().layoutInflater.inflate(
             R.layout.activity_details_page, null
@@ -38,10 +38,10 @@ class DetailsPage : DialogFragment() {
         tvPrice = rootView.tvPrice
 
 
-        var item: ShoppingItem = (arguments?.getSerializable(ShoppingActivity.KEY_ITEM) as ShoppingItem)
-        tvName.setText("Name: ${item.name}")
-        tvDescription.setText("Description: ${item.description}")
-        tvPrice.setText("Price: $${(item.price.toString())}")
+        val item: ShoppingItem = (arguments?.getSerializable(ShoppingActivity.KEY_ITEM) as ShoppingItem)
+        tvName.setText(getString(R.string.detName, item.name))
+        tvDescription.setText(getString(R.string.detDesc,item.description))
+        tvPrice.setText(getString(R.string.detPrice, item.price.toString()))
 
 
         builder.setPositiveButton("OK") { dialog, which ->

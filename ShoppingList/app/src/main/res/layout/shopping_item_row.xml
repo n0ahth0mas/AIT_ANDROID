@@ -18,7 +18,7 @@
             android:id="@+id/cbItem"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Purchased"
+            android:text="@string/purchased"
             android:textSize="20sp"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toTopOf="parent" />
@@ -27,30 +27,31 @@
             android:id="@+id/tvPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0000"
             android:textSize="20sp"
             card_view:layout_constraintBottom_toBottomOf="@+id/tvCost"
             card_view:layout_constraintStart_toEndOf="@+id/tvCost" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnDelete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
-            android:text="Delete"
+            android:backgroundTint="#F5BC2E"
+            android:text="@string/delete"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintEnd_toEndOf="parent" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnEdit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Edit"
+            android:text="@string/edit"
             card_view:layout_constraintBottom_toBottomOf="@+id/btnDelete"
             card_view:layout_constraintStart_toEndOf="@+id/itemImg"
             card_view:layout_constraintTop_toTopOf="@+id/btnDelete"
+            android:backgroundTint="#F5BC2E"
             card_view:layout_constraintVertical_bias="0.0" />
 
         <ImageView
@@ -71,7 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="60dp"
             android:layout_marginRight="60dp"
-            android:text="Cost: $"
+            android:text="@string/cost"
             android:textSize="20sp"
             card_view:layout_constraintBottom_toTopOf="@+id/guideline"
             card_view:layout_constraintEnd_toEndOf="parent"
@@ -85,7 +86,7 @@
             android:orientation="horizontal"
             card_view:layout_constraintGuide_begin="32dp" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnDetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -93,7 +94,8 @@
             android:layout_marginLeft="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
-            android:text="Details"
+            android:backgroundTint="#F5BC2E"
+            android:text="@string/details"
             card_view:layout_constraintBottom_toBottomOf="@+id/btnEdit"
             card_view:layout_constraintEnd_toStartOf="@+id/btnDelete"
             card_view:layout_constraintStart_toEndOf="@+id/btnEdit"

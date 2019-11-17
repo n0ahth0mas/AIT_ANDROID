@@ -13,19 +13,19 @@
     <EditText
         android:id="@+id/etName"
         android:layout_width="match_parent"
-        android:hint="Name"
+        android:hint="@string/name"
         android:layout_height="match_parent"/>
 
     <EditText
         android:id="@+id/etDescription"
         android:layout_width="match_parent"
-        android:hint="Description"
+        android:hint="@string/description"
         android:layout_height="match_parent"/>
 
     <EditText
         android:id="@+id/etPrice"
         android:inputType="number"
-        android:hint="Price"
+        android:hint="@string/price"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

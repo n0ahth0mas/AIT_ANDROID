@@ -20,10 +20,7 @@ class ShoppingActivity : AppCompatActivity(), ShoppingDialog.ShoppingItemHandler
 
     companion object{
         const val KEY_ITEM = "KEY_ITEM"
-        const val KEY_STARTED = "KEY_STARTED"
         const val TAG_ITEM_DIALOG = "TAG_ITEM_DIALOG"
-        const val TAG_TODO_EDIT = "TAG_TODO_EDIT"
-        const val KEY_ITEM_DETAILS = "KEY_ITEM_DETAILS"
         const val TAG_ITEM_DETAILS= "TAG_ITEM_DETAILS"
 
     }
@@ -48,23 +45,9 @@ class ShoppingActivity : AppCompatActivity(), ShoppingDialog.ShoppingItemHandler
         }
     }
 
-    /**
-    fun saveWasStarted(){
-        var sharedPref = PreferenceManager.getDefaultSharedPreferences( this)
-        var editor = sharedPref.edit()
-        editor.putBoolean((KEY_STARTED, true)
-        editor.apply()
-    }
-
-    fun wasStartedBefore(): Boolean{
-        var sharedPref = PreferenceManager.getDefaultSharedPreferences(this)
-        return sharedPref.getBoolean(KEY_STARTED, false)
-    }
-    **/
-
     private fun initRecyclerView(){
         Thread {
-            var items = AppDatabase.getInstance(this@ShoppingActivity).shoppingItemDao().getAllItems()
+            val items = AppDatabase.getInstance(this@ShoppingActivity).shoppingItemDao().getAllItems()
 
             runOnUiThread {
                 shoppingListAdapter = ShoppingListAdapter(this, items)
@@ -81,7 +64,7 @@ class ShoppingActivity : AppCompatActivity(), ShoppingDialog.ShoppingItemHandler
         }.start()
     }
 
-    fun showAddItemDialog(){
+    private fun showAddItemDialog(){
         ShoppingDialog().show(supportFragmentManager, TAG_ITEM_DIALOG)
     }
 
@@ -90,7 +73,7 @@ class ShoppingActivity : AppCompatActivity(), ShoppingDialog.ShoppingItemHandler
     fun showEditShoppingItemDialog(itemToEdit: ShoppingItem, idx: Int){
         editIndex = idx
 
-        var editDialog = ShoppingDialog()
+        val editDialog = ShoppingDialog()
 
         val bundle = Bundle()
         bundle.putSerializable(KEY_ITEM, itemToEdit)
@@ -101,7 +84,7 @@ class ShoppingActivity : AppCompatActivity(), ShoppingDialog.ShoppingItemHandler
     }
 
     fun showDetails(shoppingItem: ShoppingItem){
-        var detailsDialog = DetailsPage()
+        val detailsDialog = DetailsPage()
 
         val bundle = Bundle()
 
@@ -113,9 +96,9 @@ class ShoppingActivity : AppCompatActivity(), ShoppingDialog.ShoppingItemHandler
     }
 
 
-    fun saveShoppingItem(shoppingItem: ShoppingItem){
+    private fun saveShoppingItem(shoppingItem: ShoppingItem){
         Thread{
-            var newId: Long = AppDatabase.getInstance(this@ShoppingActivity).shoppingItemDao().insertItem(shoppingItem)
+            val newId: Long = AppDatabase.getInstance(this@ShoppingActivity).shoppingItemDao().insertItem(shoppingItem)
 
             shoppingItem.itemId = newId
 

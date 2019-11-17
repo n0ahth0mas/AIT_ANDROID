@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">Shopple</string>
     <string name="title_activity_shopping">Shopple</string>
+    <string name="detName">Name: %1$s</string>
+    <string name="detDesc">Description: %1$s</string>
+    <string name="detPrice">Price: $%1$s</string>
+    <string name="mainTitle">View Item Details</string>
+    <string name="name">Name</string>
+    <string name="description">Description</string>
+    <string name="price">Price</string>
+    <string name="purchased">Purchased</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="cost">Cost: $</string>
+    <string name="details">Details</string>
 </resources>
