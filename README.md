@@ -4,6 +4,7 @@ Android Projects I worked on while at AIT in my mobile software development cour
 ## Table of Contents  
 [Project 1: Minesweeper](#minesweeper)  
 [Project 2: Shopping List](#shopping)
+
 [Additional Information](#extra) 
 
 <a name="minesweeper">
