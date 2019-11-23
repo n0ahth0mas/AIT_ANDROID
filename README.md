@@ -12,4 +12,6 @@ The goal of this first project was to create a basic implementation of Minesweep
 
  I was able to extend these specification to further build on my understading of the Android platform - in this project, I added additional images to the game interface and created a color changing gradient background as well.
 
+ <p float="left">
 ![Blank Minefield](/images/ms1.png) ![In-progress Game](/images/ms2.png)![Winning Screen](/images/ms3.png)
+</p>
