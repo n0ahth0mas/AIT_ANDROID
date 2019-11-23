@@ -1,12 +1,13 @@
 # AIT ANDROID
 Android Projects I worked on while at AIT in my mobile software development course.
 
-##### Table of Contents  
+##Table of Contents  
 [Project 1: Minesweeper](#minesweeper)  
 [Project 2: Shopping List](#shopping)
 [Additional Information](#extra) 
 
 <a name="minesweeper">
+
 # PROJECT 1: MINESWEEPER
 
 The goal of this first project was to create a basic implementation of Minesweeper using our introductory knowledge in Android Studio and Kotlin. The main specifications of this project were:
@@ -23,6 +24,7 @@ The goal of this first project was to create a basic implementation of Minesweep
 | ![Blank Minefield](/images/ms1.png) | ![In-progress Game](/images/ms2.png)  | ![Winning Screen](/images/ms3.png)  |
 
 <a name="shopping">
+
 # PROJECT 2: Shopping List
 
 The goal of this second project was to create a more advanced Android application to further our understanding and to give us inspiration for future personal projects by creating a shopping list that stores user input data. The specifications of this project were to:
@@ -39,6 +41,7 @@ The goal of this second project was to create a more advanced Android applicatio
 | ![Shopple Splash](/images/slSplash.png) | ![Empty Shopping List](/images/slBlank.png)  | ![Creation Screen](/images/slItem.png)  | ![Filled List](/images/slList.png)  |
 
 <a name="extra">
+
 # ADDITIONAL INFORMATION
 
 ## Built With:
