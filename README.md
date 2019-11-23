@@ -25,7 +25,7 @@ The goal of this first project was to create a basic implementation of Minesweep
 
 <a name="shopping">
 
-# PROJECT 2: Shopping List
+# PROJECT 2: SHOPPING LIST
 
 The goal of this second project was to create a more advanced Android application to further our understanding and to give us inspiration for future personal projects by creating a shopping list that stores user input data. The specifications of this project were to:
  1. create multiple activities
