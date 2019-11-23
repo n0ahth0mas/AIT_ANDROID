@@ -28,5 +28,5 @@ The goal of this second project was to create a more advanced Android applicatio
  This project allowed me to expand my understanding on data storage and SQL queries, which will help for future projets using Firebase and other APIs. This has also introduced me to animations, something which I am excited to utilize in other assignments and personal projects.
 
 | Shopple Splash Screen  | Empty Shopping List | Item Creation Screen |  Filled Shopping List | 
-| ------------- | ------------- |------------- |
+| ------------- | ------------- |------------- |------------- |
 | ![Shopple Splash](/images/slSplash.png) | ![Empty Shopping List](/images/slBlank.png)  | ![Creation Screen](/images/slItem.png)  | ![Filled List](/images/slList.png)  |
