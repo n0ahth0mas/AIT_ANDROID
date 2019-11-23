@@ -16,3 +16,17 @@ The goal of this first project was to create a basic implementation of Minesweep
 | ------------- | ------------- |------------- |
 | ![Blank Minefield](/images/ms1.png) | ![In-progress Game](/images/ms2.png)  | ![Winning Screen](/images/ms3.png)  |
 
+# PROJECT 2: Shopping List
+
+The goal of this second project was to create a more advanced Android application to further our understanding and to give us inspiration for future personal projects. The specifications of this project were to:
+ 1. create multiple activities
+ 2. use RecyclerView to display lists
+ 3. implement custom dialogs
+ 4. create splash animations
+ 5. introduct persistant data storage through the Room library
+
+ This project allowed me to expand my understanding on data storage and SQL queries, which will help for future projets using Firebase and other APIs. This has also introduced me to animations, something which I am excited to utilize in other assignments and personal projects.
+
+| Shopple Splash Screen  | Empty Shopping List | Item Creation Screen |  Filled Shopping List | 
+| ------------- | ------------- |------------- |
+| ![Shopple Splash](/images/slSplash.png) | ![Empty Shopping List](/images/slBlank.png)  | ![Creation Screen](/images/slItem.png)  | ![Filled List](/images/slList.png)  |
