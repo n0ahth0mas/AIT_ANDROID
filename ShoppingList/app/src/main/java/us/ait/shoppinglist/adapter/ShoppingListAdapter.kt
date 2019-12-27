@@ -82,7 +82,7 @@ class ShoppingListAdapter : RecyclerView.Adapter<ShoppingListAdapter.ViewHolder>
         shoppingList.set(index,shoppingItem)
         notifyItemChanged(index)
     }
-
+q
 
     private fun deleteShoppingItem(index: Int){
         Thread{

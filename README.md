@@ -1,9 +1,10 @@
 # AIT ANDROID
-Android Projects I worked on while at AIT in my mobile software development course.
+Android Projects I worked on while at the Aquincum Instutite of Technology in Budapest in my mobile software development course.
 
 ## Table of Contents  
 [Project 1: Minesweeper](#minesweeper)  
 [Project 2: Shopping List](#shopping)  
+[Final Project: HomeCook](https://github.com/n0ahth0mas/AndroidFinal)
 [Additional Information](#extra) 
 
 <a name="minesweeper">
@@ -40,6 +41,15 @@ The goal of this second project was to create a more advanced Android applicatio
 | ------------- | ------------- |------------- |------------- |
 | ![Shopple Splash](/images/slSplash.png) | ![Empty Shopping List](/images/slBlank.png)  | ![Creation Screen](/images/slItem.png)  | ![Filled List](/images/slList.png)  |
 
+#FINAL PROJECT: HOMECOOK
+
+This was the final project for my mobile course. There were no real instructions for this project other than expand upon all other lessons, so my project partner and I did exactly that. Our final product was Homecook (located [here](https://github.com/n0ahth0mas/AndroidFinal)), a cooking app where users sign in and can store the ingredients they currently have, search recipes based on main ingredient, and view their favorited recipes. The main elements of this project were:
+1. Google Sign-on
+2. Firebase storage of userid, favorite recipes (by recipe id), and ingredient
+3. API call and manipulation using Repos ([The MealDB](https://themealdb.com/))
+4. Implementation of other online libraries
+5. Fragment backstack management
+
 <a name="extra">
 
 # ADDITIONAL INFORMATION
@@ -47,3 +57,5 @@ The goal of this second project was to create a more advanced Android applicatio
 ## Built With:
 * [Android Studio](https://developer.android.com/studio) - Development environment used to create all applications
 * [Kotlin](https://kotlinlang.org/) - Programming language used for development
+* [The MealDB](https://themealdb.com/) - Database used for HomeCook
+* [Firebase](https://firebase.google.com/) - Used for cloud-based storage
