@@ -4,7 +4,7 @@ Android Projects I worked on while at the Aquincum Instutite of Technology in Bu
 ## Table of Contents  
 [Project 1: Minesweeper](#minesweeper)  
 [Project 2: Shopping List](#shopping)  
-[Final Project: HomeCook](https://github.com/n0ahth0mas/AndroidFinal)
+[Final Project: HomeCook](https://github.com/n0ahth0mas/AndroidFinal) 
 [Additional Information](#extra) 
 
 <a name="minesweeper">
@@ -53,7 +53,7 @@ This was the final project for my mobile course. There were no real instructions
 | Homecook Splash Screen  | Favorited Recipes | Recipe Details | 
 | ------------- | ------------- |------------- |
 | ![Homecook Splash Screen](/images/homecook_splash.png) | ![Favorited Recipes](/images/homecook_favs.png)  | ![Recipe Details](/images/homecook_details.png)  |
-| ------------- | ------------- |------------- |
+
 | Ingredients  | Ingredient Dialog | Search Results | 
 | ------------- | ------------- |------------- |
 | ![Ingredeints](/images/homecook_ingredients.png) | ![Ingredient Dialog](/images/homecook_ingredientdialog.png)  | ![Search Results](/images/homecook_search.png)  |
