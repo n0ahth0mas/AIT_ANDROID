@@ -50,6 +50,14 @@ This was the final project for my mobile course. There were no real instructions
 4. Implementation of other online libraries
 5. Fragment backstack management
 
+| Homecook Splash Screen  | Favorited Recipes | Recipe Details | 
+| ------------- | ------------- |------------- |
+| ![Homecook Splash Screen](/images/homecook_splash.png) | ![Favorited Recipes](/images/homecook_favs.png)  | ![Recipe Details](/images/homecook_details.png)  |
+| ------------- | ------------- |------------- |
+| Ingredients  | Ingredient Dialog | Search Results | 
+| ------------- | ------------- |------------- |
+| ![Ingredeints](/images/homecook_ingredients.png) | ![Ingredient Dialog](/images/homecook_ingredientdialog.png)  | ![Search Results](/images/homecook_search.png)  |
+
 <a name="extra">
 
 # ADDITIONAL INFORMATION
