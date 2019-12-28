@@ -41,7 +41,7 @@ The goal of this second project was to create a more advanced Android applicatio
 | ------------- | ------------- |------------- |------------- |
 | ![Shopple Splash](/images/slSplash.png) | ![Empty Shopping List](/images/slBlank.png)  | ![Creation Screen](/images/slItem.png)  | ![Filled List](/images/slList.png)  |
 
-#FINAL PROJECT: HOMECOOK
+# FINAL PROJECT: HOMECOOK
 
 This was the final project for my mobile course. There were no real instructions for this project other than expand upon all other lessons, so my project partner and I did exactly that. Our final product was Homecook (located [here](https://github.com/n0ahth0mas/AndroidFinal)), a cooking app where users sign in and can store the ingredients they currently have, search recipes based on main ingredient, and view their favorited recipes. The main elements of this project were:
 1. Google Sign-on
